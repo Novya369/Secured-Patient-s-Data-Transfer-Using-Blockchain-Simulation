@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='hospital_dashboard.css') }}">
+</head>
+<body>
+    <h1>Hospital Dashboard</h1>
+    <h2>Welcome, {{ session['username'] }}</h2>
+    <br>
+    <div class="buttonContainer">
+    <a id="access" href="/access_report">Access Report</a><br><br><br>
+    <a id="home" href="/">Home</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='patient_dashboard.css') }}">
+</head>
+<body>
+    <h1>Patient Dashboard</h1>
+    <h2>Welcome, {{ session['username'] }}</h2>
+
+    <div class="container">
+    <div class="idContainer">
+    <h3>Your Transaction IDs:</h3>
+    <ul>
+        {% for transaction_id in transaction_ids %}
+            <li>{{ transaction_id }}</li>
+        {% endfor %}
+    </ul>
+    </div>
+    <br>
+    <div class="buttonContainer">
+        <a id="push" href="/push_report">Push Report</a><br><br><br>
+        <a id="access" href="/access_report">Access Report</a><br><br><br>
+        <a id="home" href="/">Home</a>
+
+    </div>
+</div>
+</body>
+</html>

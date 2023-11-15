@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Access Report</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='access_report.css') }}">
+</head>
+<body>
+    <h1>Access Report</h1>
+    <div id="accessBox">
+    <form action="/access_report" method="POST">
+        <input id="input" type="text" id="transaction_id" name="transaction_id" required placeholder="Enter Transaction ID"><br><br>
+        <input id="submit" type="submit" value="Access Report">
+    </form>
+    </div>
+</body>
+</html>
